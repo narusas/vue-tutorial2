@@ -1,16 +1,17 @@
 <template>
-  <div class="bg-blue-400 w-full h-auto p-8 flex justify-center font-sans">
-    <tasks-panel></tasks-panel>
+  <div class="bg-blue-400 w-full h-full p-8 flex justify-center font-sans">
+    <tasks-lane v-for="lane in lanes" :key="lane.id"></tasks-lane>
   </div>
 </template>
 
 <script setup>
 import {Home, More} from '@icon-park/vue-next';
-
 import {ref} from "vue";
-import TasksPanel from "./components/TasksPanel.vue";
+import TasksLane from "./components/TasksLanes.vue";
 
-const tasks  = ref({})
+import {useModel} from "./models/models.js";
 
+const {lanes} = useModel();
+console.log(lanes);
 </script>
 
