@@ -1,6 +1,6 @@
 <template>
   <div class="bg-blue-400 w-full h-full p-8 flex justify-center font-sans">
-    <tasks-lane v-for="lane in lanes" :key="lane.id"></tasks-lane>
+    <tasks-lane ></tasks-lane>
   </div>
 </template>
 

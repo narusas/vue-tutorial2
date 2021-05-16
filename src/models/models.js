@@ -44,6 +44,8 @@ const data = ref({
 });
 
 export function useModel() {
+  const models = ref({});
+
 
   const lanes = computed(()=>{
     return data.value.laneList.map(laneId => data.value.lanes[laneId]);
